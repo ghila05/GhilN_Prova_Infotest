@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GhilN_Prova_Infotest
 {
-    public abstract class GhilN_Lavoratore : GhilN_Prova_Candidato
+    public abstract class GhilN_Lavoratore : GhilN_Prova_Candidato, IEquatable<GhilN_Lavoratore>, IComparable<GhilN_Lavoratore>
     {
         int GhilN_esperienze;
 
@@ -47,6 +47,34 @@ namespace GhilN_Prova_Infotest
             }
             else return false;
         }
+        public override string ToString()
+        {
+            return Nome + ";" + Matricola + ";" + Esperienze;
+        }
+
+        public bool Equals(GhilN_Lavoratore tmp)
+        {
+            if (this.Nome == tmp.Nome && this.Matricola == tmp.Matricola && this.Esperienze == tmp.Esperienze)
+                return true;
+            else
+                return false;
+
+        }
+
+        public int CompareTo(GhilN_Lavoratore other)
+        {
+            if (other.punteggio() < this.punteggio()) return -1;
+
+
+            if (other.punteggio() > this.punteggio()) return 1;
+
+            return 0;
+
+
+        }
+
+        public override int GetHashCode() => (Matricola,Nome).GetHashCode();
+
 
 
 
