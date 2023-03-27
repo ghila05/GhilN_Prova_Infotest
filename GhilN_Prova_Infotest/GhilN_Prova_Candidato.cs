@@ -8,8 +8,8 @@ namespace GhilN_Prova_Infotest
 {
     public abstract class GhilN_Prova_Candidato
     {
-        int GhilN_Prova_Matricola;
-        string GhilN_Prova_nome;
+        int GhilN_Matricola;
+        string GhilN_nome;
 
         public int Matricola { get; set; }
 
