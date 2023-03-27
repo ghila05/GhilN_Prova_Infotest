@@ -56,10 +56,10 @@ namespace GhilN_Prova_Infotest
 
         public int CompareTo(GhilN_Prova_Candidato other)
         {
-            if (other.punteggio() < this.punteggio()) return -1;
+            if (other.punteggio() < this.punteggio()) return 1;
 
 
-            if (other.punteggio() > this.punteggio()) return 1;
+            if (other.punteggio() > this.punteggio()) return -1;
 
             return 0;
 

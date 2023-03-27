@@ -98,10 +98,10 @@ namespace GhilN_Prova_Infotest
 
         public int CompareTo(GhilN_Disoccupato other)
         {
-            if (other.punteggio() < this.punteggio()) return -1;
+            if (other.punteggio() < this.punteggio()) return 1;
 
 
-            if (other.punteggio() > this.punteggio()) return 1;
+            if (other.punteggio() > this.punteggio()) return -1;
 
             return 0;
         }
