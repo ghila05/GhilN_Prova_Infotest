@@ -53,6 +53,7 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="GhilN_Disoccupato.cs" />
+    <Compile Include="GhilN_Lavoratore.cs" />
     <Compile Include="GhilN_Prova_Candidato.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

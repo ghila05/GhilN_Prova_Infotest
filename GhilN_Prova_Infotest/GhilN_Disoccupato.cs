@@ -52,7 +52,6 @@ namespace GhilN_Prova_Infotest
 
         public GhilN_Disoccupato() 
         {
-
             Voto = 0;
             Lode = false;
         }
@@ -82,5 +81,8 @@ namespace GhilN_Prova_Infotest
             else return false;
 
         }
+
+
+
     }
 }
