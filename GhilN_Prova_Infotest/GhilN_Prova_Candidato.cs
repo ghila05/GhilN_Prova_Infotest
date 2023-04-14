@@ -15,26 +15,25 @@ namespace GhilN_Prova_Infotest
 
         public string Nome { get; set; }
 
-        public GhilN_Prova_Candidato()
+        public GhilN_Prova_Candidato() : this(0, "")
         {
-            Nome = "";
-            Matricola = 0;
+
         }
-        public GhilN_Prova_Candidato(int matricola)
+        public GhilN_Prova_Candidato(int mat) : this(mat, "")
         {
-            Matricola = matricola;
-            Nome = "";
+
         }
-        public GhilN_Prova_Candidato(string nome)
+        public GhilN_Prova_Candidato(string nome) : this(0, nome)
         {
-            Nome = nome;
-            Matricola=0;
+
         }
-        public GhilN_Prova_Candidato(string nome, int matricola)
+        public GhilN_Prova_Candidato(int matr, string nome)
         {
-            Nome = nome;
-            Matricola = matricola;
+            GhilN_Matricola = matr;
+            GhilN_nome = nome;
         }
+
+
 
         public abstract bool isIdoneo();
 

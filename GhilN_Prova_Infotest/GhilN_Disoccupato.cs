@@ -55,7 +55,7 @@ namespace GhilN_Prova_Infotest
             Voto = 0;
             Lode = false;
         }
-        public GhilN_Disoccupato(int voto, bool lode, string nome, int matricola): base(nome, matricola)
+        public GhilN_Disoccupato(int voto, bool lode, int nome, string matricola): base(nome, matricola)
         {
             Voto = voto;
             Lode = lode;
@@ -87,23 +87,15 @@ namespace GhilN_Prova_Infotest
             return Nome + ";" + Matricola + ";" + Voto + ";" + Lode;
         }
 
-        public bool Equals(GhilN_Disoccupato tmp)
+        public bool Equals(GhilN_Disoccupato d)
         {
-            if (this.Nome == tmp.Nome && this.Matricola == tmp.Matricola && this.Voto == tmp.Voto && this.Lode == tmp.Lode)
-                return true;
-            else
-                return false;
-
+            return ((base.Equals((GhilN_Disoccupato)d)) && (d.GhilN_voto == this.GhilN_voto) && (d.GhilN_lode == this.GhilN_lode));
         }
 
-        public int CompareTo(GhilN_Disoccupato other)
+
+        public int CompareTo(GhilN_Disoccupato l)
         {
-            if (other.punteggio() < this.punteggio()) return 1;
-
-
-            if (other.punteggio() > this.punteggio()) return -1;
-
-            return 0;
+            return (base.CompareTo((GhilN_Disoccupato)l));
         }
 
         public override int GetHashCode() => (Matricola, Nome).GetHashCode();

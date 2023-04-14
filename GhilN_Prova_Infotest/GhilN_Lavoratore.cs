@@ -29,7 +29,7 @@ namespace GhilN_Prova_Infotest
         {
             Esperienze = 0;
         }
-        public GhilN_Lavoratore(int esperienza, int matricola, string nome): base (nome, matricola)
+        public GhilN_Lavoratore(int esperienza, string matricola, int nome): base (nome, matricola)
         {
             Esperienze = esperienza;
         }
@@ -51,27 +51,18 @@ namespace GhilN_Prova_Infotest
         {
             return Nome + ";" + Matricola + ";" + Esperienze;
         }
-
-        public bool Equals(GhilN_Lavoratore tmp)
+ 
+        public bool Equals(GhilN_Lavoratore Lavoratore)
         {
-            if (this.Nome == tmp.Nome && this.Matricola == tmp.Matricola && this.Esperienze == tmp.Esperienze)
-                return true;
-            else
-                return false;
-
+            return (base.Equals((GhilN_Lavoratore)Lavoratore));
         }
 
-        public int CompareTo(GhilN_Lavoratore other)
+        public int CompareTo(GhilN_Lavoratore Lavoratore)
         {
-            if (other.punteggio() < this.punteggio()) return 1;
-
-
-            if (other.punteggio() > this.punteggio()) return -1;
-
-            return 0;
-
-
+            return (base.CompareTo((GhilN_Lavoratore)Lavoratore));
         }
+
+   
 
         public override int GetHashCode() => (Matricola,Nome).GetHashCode();
 
